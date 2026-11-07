@@ -1,0 +1,16 @@
+import java.util.*;
+import java.util.stream.*;
+import java.util.function.*;
+
+public class Test {
+    public static void main(String[] args){
+        List<Integer> numbers = Arrays.asList(100,99,98,97,96,95,94,93,92,91,90,90,95,97);
+
+    List<Integer> ascending = numbers.stream().sorted().collect(Collectors.toList()); 
+        System.out.println(ascending);
+         List<Integer> descending = numbers.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()); 
+        System.out.println(descending);
+    }
+}
+
+// Extract all numbers greater than .
