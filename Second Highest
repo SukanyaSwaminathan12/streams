@@ -1,0 +1,17 @@
+import java.util.*;
+import java.util.stream.*;
+
+public class Test {
+    public static void main(String[] args){
+        List<Integer> numbers = Arrays.asList(100,99,98,97,96,95,94,93,92,91,90);
+
+      Optional<Integer> secondHighest = numbers.stream()
+          .distinct()
+          .sorted(Comparator.reverseOrder())
+          .skip(1)
+          .findFirst();
+    System.out.println("Second highest :: " + secondHighest.get());    
+
+        
+    }
+}
