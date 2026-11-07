@@ -1,0 +1,16 @@
+// Online Java Compiler (Editor)
+// Write and run Java online using this editor.
+import java.util.*;
+import java.util.stream.*;
+class Main {
+    public static void main(String[] args) {
+       List<Integer> numbers = Arrays.asList(34,28,19,20,2,56,99,10);
+
+        Optional<Integer> maxNumber = numbers.stream()          
+            .max(Integer::compare);
+            
+            
+
+    System.out.println("MaxNumber ::" + maxNumber.get());
+    }
+}
