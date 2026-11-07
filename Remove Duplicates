@@ -7,11 +7,7 @@ public class Test {
 
       List<Integer> noDuplicateList = numbers.stream()
           .distinct()
-          .collect(Collectors.toList());
-
-
-        noDuplicateList.forEach(e -> System.out.println(e));
-
-        
+         .peek(System.out::println)
+         .collect(Collectors.toList());        
     }
 }
