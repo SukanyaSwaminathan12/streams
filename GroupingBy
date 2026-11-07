@@ -15,11 +15,10 @@ public class Test{
     employees.add(new Employee(8,"SUR",700,"SOUTH"));
 
     Map<String, Optional<Employee>> highestSalary = employees.stream().
-        collect(Collectors.groupingBy(Employee::getEmployeeRegion,                                     Collectors.maxBy(Comparator.comparing(Employee::getEmployeeSalary))));
-
+        collect(Collectors.groupingBy(Employee::getEmployeeRegion, Collectors.maxBy(Comparator.comparing(Employee::getEmployeeSalary))));
 
     highestSalary.forEach((region,employee) -> 
-                         System.out.println("Region ::" + region + "Employee name ::" + employee.get().getEmployeeName() + "Employee Salary ::" + employee.get().getEmployeeSalary()));
+         System.out.println("Region ::" + region + "Employee name ::" + employee.get().getEmployeeName() + "Employee Salary ::" + employee.get().getEmployeeSalary()));
     
 }
 }
