@@ -5,14 +5,14 @@ public class Test {
     public static void main(String[] args){
         List<Integer> numbers = Arrays.asList(100,99,98,97,96,95,94,93,92,91,90);
 
-       Optional<Integer> secondHighest = numbers.stream()
+       Optional<Integer> secondLowest = numbers.stream()
            .distinct()
            .sorted()
            .skip(1)
            .findFirst();
        
 
-        System.out.println ("Second highest number ::" + secondHighest.get());
+        System.out.println ("Second lowest number ::" + secondLowest.get());
 
         
     }
