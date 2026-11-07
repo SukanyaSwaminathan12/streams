@@ -1,0 +1,23 @@
+import java.util.*;
+import java.util.stream.*;
+import java.util.function.*;
+
+public class Test {
+    public static void main(String[] args){
+        List<Integer> numbers = Arrays.asList(100,99,98,97,96,95,94,93,92,91,90,90,95,97);
+
+                
+     int sum =   
+         numbers
+          .stream()
+           .mapToInt(Integer::intValue)
+           .sum();
+System.out.println(sum);
+         
+   
+    }
+}
+
+
+
+//Calculate the sum of all numbers in a collection.
