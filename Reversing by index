@@ -1,0 +1,18 @@
+import java.util.*;
+import java.util.stream.*;
+import java.util.function.*;
+
+public class Test {
+    public static void main(String[] args){
+        List<Integer> numbers = Arrays.asList(100,101,99,98,97,96,95,94,93,92,91,90,90,95,97,110);
+     //  List<Integer> smallNumbers = Arrays.asList(1,2,3,4,5,6,7,8,9, -8, -20,94,93);
+
+        List<Integer> reversed = new ArrayList<>(numbers);
+        Collections.reverse(reversed);
+
+
+System.out.println(reversed);
+}
+}
+
+// Divide a list of integers into two groups based on whether they are even or odd.
