@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.stream.*;
+import java.util.function.*;
+
+public class Test {
+    public static void main(String[] args){
+        List<Integer> numbers = Arrays.asList(100,99,98,97,96,95,94,93,92,91,90,90,95,97);
+       
+
+    List<Integer> primeNumbers = numbers.stream().filter(n -> isPrime(n)).collect(Collectors.toList());
+                                    
+
+        
+        System.out.println(primeNumbers);
+        
+    }
+
+    static boolean isPrime(int n){
+        if(n < 2){
+            return false;
+        }
+        for(int i=2; i*i <= n ; i++){
+            if(n% i ==0) return false;
+           
+        }
+        return true;
+    }
+}
+
+// Merge two lists of integers into one, ensuring there are no duplicates.
